@@ -1,0 +1,104 @@
+body{
+  background: black;
+  color: white;
+}
+
+div.well{
+  height: 250px;
+} 
+
+.Absolute-Center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.Absolute-Center.is-Responsive {
+  width: 50%; 
+  height: 50%;
+  min-width: 200px;
+  max-width: 400px;
+  padding: 40px;
+}
+
+#logo-container{
+  margin: auto;
+  margin-bottom: 10px;
+  width:200px;
+  height:30px;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+}
+
+
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+
+
+.navbar-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100% !important;
+    left: 0;
+    z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+    padding-right: 0;
+    padding-left: 0;
+    width: inherit;
+
+}
+
+.navbar-wrapper .navbar {
+
+    width: 100% !important;
+}
+
+.navbar-inverse {
+  width: 100% !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  border-radius: 0;
+}
+
+.navbar-inverse .nav > li > a {
+    color: #FFFFFF;
+}
+
+.navbar-inverse .nav > li > a:hover {
+    background: none;
+}
+
+.navbar-brand a {
+  color: #FFFFFF;
+}
+
+.main-header-background {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-image: url('http://www.riwakawebsitedesigns.com/external/images/stars/img-stars-2.jpg');
+  height: 620px;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+select {
+  color: black;
+}
+
+.table {
+  position: absolute;
+  top: 400px;
+  width: 50%;
+  text-align: center;
+}
