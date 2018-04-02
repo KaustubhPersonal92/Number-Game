@@ -1,3 +1,4 @@
+# Number-Game
 1. This project has been made in react-redux for Frontend and node js for Backend.
 
 2. To start this project please use npm start command.
