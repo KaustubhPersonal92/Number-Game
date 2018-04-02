@@ -54,6 +54,7 @@ export class SignUPPage extends React.Component {
       this.props.actions.signInUsers(this.state.user).then(response=>{
         if(response.data.status ==200) {
           localStorage.setItem("username",response.data.data.username);
+          localStorage.setItem("email",response.data.data.email);
           this.redirect(response.data.message, "success");
         } else {
           this.redirect(response.data.message, "failed");
@@ -99,25 +100,6 @@ SignUPPage.propTypes = {
   user: PropTypes.object.isRequired,
   actions: PropTypes.object.isRequired
 };
-
-/*function mapStateToProps(state, ownProps) {
-  userId = ownProps.params.id;
-  
-  let user = {
-    firstname: '', 
-    lastname: '', 
-    email: '', 
-    phone:'',
-    timezone:'', 
-    role_id: ''
-  };
-
-  return {
-    user: user,
-    role: userRoleFormattedForDropdown(state.UserRole),
-    timezoneList: timezoneFormattedForDropdown(state.TimezoneList)
-  }
-}*/
 
 function mapDispatchToProps(dispatch) {
   return {

@@ -88,8 +88,8 @@ export class Dashboard extends React.Component {
       this.setState({userArray});
     }
     var username = localStorage.getItem("username");
-    console.log(username)
-    this.props.actions.sendResultToUser(this.state.userArray, username).then(response=>{
+    var email = localStorage.getItem("email");
+    this.props.actions.sendResultToUser(this.state.userArray, username, email).then(response=>{
       if(response.data.status ==200) {
         this.redirect(response.data.message, "success");
       } else {

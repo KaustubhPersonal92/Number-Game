@@ -26,9 +26,9 @@ export function signInUsers(userData) {
   };
 }
 
-export function sendResultToUser(userResult, username) {
+export function sendResultToUser(userResult, username, email) {
   return function (dispatch, getState) {
-    return UserApi.sendResultApi(userResult, username).then(response => {
+    return UserApi.sendResultApi(userResult, username, email).then(response => {
       return response;
     }).catch(error => {
       console.log(error)

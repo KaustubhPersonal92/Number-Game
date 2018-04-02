@@ -29,11 +29,13 @@ class UserApi {
     });
   }
 
-  static sendResultApi(userResult, username) {
+  static sendResultApi(userResult, username, email) {
     var data ={
       "username": username,
-      "result": userResult
+      "result": userResult, 
+      "email": email
     }
+    console.log("data--", data)
     return new Promise((resolve, reject) => {
       axios.post("http://localhost:3061/api/site/sendEmail", data).then(function(response) {
         if(response.data.status == 200) {

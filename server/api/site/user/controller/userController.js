@@ -125,14 +125,14 @@ exports.sendEmailUser = function(req, res) {
     var send = email.createTransport({
         service: 'gmail',
         auth: {
-            user: 'xxxxxx',
-            pass: 'xxxx'
+            user: 'kmkaustubh11@gmail.com',
+            pass: 'K@ustubh11'
         }
     });
-    
+    console.log("req.body.email--", req.body.email)
     var message = {
-        from:    "xxxxxx",
-        to:      "xxxxxx",
+        from:    "kmkaustubh11@gmail.com",
+        to:      req.body.email,
         subject: emailTemplate.userResultSubject,
         html:emailmessage
     };
