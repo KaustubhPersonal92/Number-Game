@@ -6,3 +6,6 @@
 3. I have use local database so if you have to add your database please make changes in "sequelizeConfig.js" file.
 
 4. I have also committed the packages so you dont have to install anything just clone the project and use "npm start" command to start the project.
+
+5. Added db file in code for User table for signup process.
+
