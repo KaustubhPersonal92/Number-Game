@@ -21,8 +21,16 @@ export class SignUPPage extends React.Component {
     };
     this.onChangeUserState = this.onChangeUserState.bind(this);
     this.saveUser = this.saveUser.bind(this);
+    this.userAuthenicate();
   }
 
+  userAuthenicate() {
+    if(localStorage.getItem("username")!=null) {
+      browserHistory.push('/dashboard')
+    } else {
+      browserHistory.push('/login');
+    }
+  }
   isValid() {
     const { errors, isValid } = validateInput(this.state.user);
 

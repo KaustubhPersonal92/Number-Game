@@ -55,7 +55,7 @@ const SignUpForm = ({user, label, onSave, onChange, saving, errors}) => {
                     className="btn btn-primary"
                     onClick={onSave}
                 />
-                <Link className="btn btn-border" to="/users">
+                <Link className="btn btn-border" to="/login">Already registered Login
                 </Link>
             </div>
         </div>

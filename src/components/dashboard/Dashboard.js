@@ -24,8 +24,16 @@ export class Dashboard extends React.Component {
     this.saveUser = this.saveUser.bind(this);
     this.createArray = this.createArray.bind(this);
     this.logout = this.logout.bind(this);
+    this.userAuthenicate();
   }
 
+  userAuthenicate() {
+    if(localStorage.getItem("username")!=null) {
+      browserHistory.push('/dashboard')
+    } else {
+      browserHistory.push('/login');
+    }
+  }
   isValid() {
     const { errors, isValid } = validateInput(this.state.user);
 
